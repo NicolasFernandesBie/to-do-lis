@@ -1,44 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo-List</title>
+    <title>To-Do List Moderno</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
-
 <body>
     <div class="container">
-        <input class="input-task" placeholder="O que tenha que fazer...">
-        <button class="button-add-task">Adicionar uma task</button>
+        <div class="todo-app">
+            <h1>Minhas Tarefas <i class="fas fa-clipboard-list"></i></h1>
+            
+            <div class="input-section">
+                <input type="text" id="task-input" placeholder="Adicionar nova tarefa...">
+                <button id="add-task-btn"><i class="fas fa-plus"></i> Adicionar</button>
+            </div>
 
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="pending">Pendentes</button>
+                <button class="filter-btn" data-filter="completed">Concluídas</button>
+            </div>
 
-        <ul class="list-tasks">
-            <li class="tasks">
-                <img src="img/checked.png" alt="check">
-                <p>Aprender Java script</p>
+            <ul id="task-list">
+            
+            </ul>
 
-                <img src="img/trash.png" alt="trash">
-            </li>
-            <li class="tasks">
-                <img src="img/checked.png" alt="check">
-                <p>Aprender J</p>
+            <div class="progress-section">
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 0%;"></div>
+                </div>
+                <span id="progress-text">0/0 Tarefas Concluídas</span>
+            </div>
 
-                <img src="img/trash.png" alt="trash">
-            </li>
-
-        </ul>
+            <button id="clear-completed-btn"><i class="fas fa-trash-alt"></i> Limpar Concluídas</button>
+        </div>
     </div>
 
+    <script src="app.js"></script>
 </body>
-
-
-
-
-
 </html>
+
+
